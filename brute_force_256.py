@@ -1,6 +1,9 @@
 import hashlib
 import random
 
+# made by Zenet
+# NOTE: this is purely for educational purposes only!
+
 class BFA:
     def __init__(self):
         self.iterations = 100_000
