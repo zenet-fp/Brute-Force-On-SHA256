@@ -1,15 +1,20 @@
 import hashlib
 import random
 
+# made by Zenet
+# NOTE: this is purely for educational purposes only!
+
 class BFA:
     def __init__(self, apply_algorithm: bool):
         self.iterations = 100_000
-      
+
         if apply_algorithm is True:
             run_restriction = DataRestriction()
             self.restriction = run_restriction.restriction_algorithm()
+
         else:
-            pass
+            self.restriction = 10
+            # otherwise set the restriction as 10
 
         print(f"The restriction length of the word was: {self.restriction}")
         print("...")
@@ -49,12 +54,14 @@ class BFA:
 
 
 class DataRestriction:
-  
+
     def restriction_algorithm(self) -> int:
         MAX_LENGTH = 50
         MIN_LENGTH = 1
 
         random_restriction_length = random.randint(MIN_LENGTH, MAX_LENGTH)
+
+        # return a random restriction length for the word
 
         return random_restriction_length
 
