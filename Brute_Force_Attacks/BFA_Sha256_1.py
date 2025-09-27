@@ -20,7 +20,7 @@ class BFA:
             self.password_combination.append(random_letter)
 
             if len(self.password_combination) == self.restriction:
-                temp_pass = ''.join(self.alphabet)
+                temp_pass = ''.join(self.password_combination)
                 random_hashed_password = hashlib.sha256(temp_pass.encode()).hexdigest()
 
                 if random_hashed_password == password:
