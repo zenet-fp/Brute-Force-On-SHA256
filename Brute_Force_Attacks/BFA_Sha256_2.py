@@ -14,7 +14,7 @@ class BFA:
 
         else:
             self.restriction = 10
-            # otherwise set the restriction as 10
+            # otherwise set the restriction to 10
 
         print(f"The restriction length of the word was: {self.restriction}")
         print("...")
