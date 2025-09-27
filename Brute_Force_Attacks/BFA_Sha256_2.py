@@ -14,7 +14,7 @@ class BFA:
 
         else:
             self.restriction = 10
-            # otherwise set the restriction to 10
+            # otherwise set the restriction as 10
 
         print(f"The restriction length of the word was: {self.restriction}")
         print("...")
@@ -34,7 +34,8 @@ class BFA:
             self.password_combination.append(random_letter)
 
             if len(self.password_combination) == self.restriction:
-                temp_pass = ''.join(self.alphabet)
+                temp_pass = ''.join(self.password_combination)
+                print(temp_pass)
                 random_hashed_password = hashlib.sha256(temp_pass.encode()).hexdigest()
 
                 if random_hashed_password == password:
